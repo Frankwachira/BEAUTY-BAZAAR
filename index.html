@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Bazaar Nail Salon</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <h1 class="logo">Beauty Bazaar</h1>
+            <img src="images/image1.jpg" alt="Profile" class="profile-icon">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="contacts.html"><i class="fas fa-phone"></i> Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-summary">
+            <h2>Salon Overview</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Today's Bookings</h3>
+                    <p><span id="today-bookings">10</span></p>
+                </div>
+                <div class="card">
+                    <h3>Total Cash</h3>
+                    <p><span id="total-cash">$500</span></p>
+                </div>
+                <div class="card">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Add New Booking</a></li>
+                        <li><a href="#">View Clients</a></li>
+                        <li><a href="#">Payment History</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-graph">
+            <h2>Revenue Trend</h2>
+            <div class="graph-container">
+                <canvas id="revenueTrend"></canvas>
+            </div>
+        </section>
+        <section class="nail-gallery">
+  <h2>Our Nail Art Gallery</h2>
+  <img src="https://images.pexels.com/photos/12008356/pexels-photo-12008356.jpeg" alt="Elegant French manicure">
+  <img src="https://images.pexels.com/photos/10040927/pexels-photo-10040927.jpeg" alt="Colorful gel nails">
+  <img src="https://images.pexels.com/photos/9137001/pexels-photo-9137001.jpeg" alt="Acrylic nail design">
+</section>
+
+        <section class="actions">
+            <button id="addBookingBtn" class="primary-btn">
+                <i class="fas fa-plus-circle"></i> Add Booking
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Beauty Bazaar. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
