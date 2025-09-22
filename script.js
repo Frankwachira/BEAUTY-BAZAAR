@@ -4,7 +4,7 @@ if (ctx) {
   new Chart(ctx, {
     type: "line",
     data: {
-      labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+      labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       datasets: [{
         label: "Revenue ($)",
         data: [120, 200, 150, 300, 250],

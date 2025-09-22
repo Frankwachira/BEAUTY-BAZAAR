@@ -5,18 +5,20 @@
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
+    background: #F5EFF1 url('https://images.pexels.com/photos/29228984/pexels-photo-29228984.jpeg') no-repeat center center / cover;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f7f7f7;
-    color: #333;
+    color: #060607; /* Deep Plum */
 }
 
-/* Header styles with solid pink */
+/* Header styles */
 header {
-    background-color: #ff69b4;
-    color: #fff;
+    background-color: #FDCEDF; /* Blush Pink */
+    color: #3A3967; /* Deep Plum */
     padding: 20px 0;
+    text-align: center;
 }
 
 .top-bar {
@@ -28,7 +30,7 @@ header {
 
 .logo {
     font-size: 2em;
-    color: #fff;
+    color: #3A3967; /* Deep Plum */
 }
 
 .profile-icon {
@@ -37,9 +39,9 @@ header {
     border-radius: 50%;
 }
 
-/* Navigation styles with solid pink */
+/* Navigation styles */
 .main-nav {
-    background-color: #ff6f61;
+    background-color: #FBAE75; /* Champagne Gold */
 }
 
 .main-nav ul {
@@ -54,15 +56,17 @@ header {
 }
 
 .main-nav ul li a {
-    color: #fff;
+    color: #FFF; /* White */
     text-decoration: none;
     font-size: 1.1em;
     display: flex;
     align-items: center;
 }
 
-.main-nav ul li a:hover {
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
     text-decoration: underline;
+    outline: none;
 }
 
 /* Main section styles */
@@ -85,8 +89,8 @@ main {
 }
 
 .card {
-    background-color: #ffe4e1;
-    border: 1px solid #ddd;
+    background-color: #FFE4E1; /* Soft color for cards */
+    border: 1px solid #DDD;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -98,11 +102,11 @@ main {
     margin-bottom: 10px;
 }
 
-/* Nail gallery styles with soft pink background */
+/* Nail gallery styles */
 .nail-gallery {
     margin: 40px 0;
     text-align: center;
-    background-color: #fff0f5;
+    background-color: #FFF0F5; /* Light soft pink background */
     padding: 30px 20px;
     border-radius: 10px;
 }
@@ -110,7 +114,7 @@ main {
 .nail-gallery h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: #b22222;
+    color: #3A3967; /* Deep Plum */
 }
 
 .nail-gallery img {
@@ -126,60 +130,69 @@ main {
     transform: scale(1.05);
 }
 
-/* Action button styles with solid pink */
-.actions {
-    text-align: center;
-    margin-top: 30px;
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.primary-btn {
-    background-color: #ff69b4;
-    color: #fff;
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #3A3967; /* Deep Plum */
+}
+
+select,
+input[type="date"],
+button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid #FBAE75; /* Champagne Gold */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+select:focus,
+input[type="date"]:focus {
+    border-color: #FDCEDF; /* Blush Pink */
+    outline: none;
+}
+
+/* Button styles */
+button {
+    background-color: #FBAE75; /* Champagne Gold */
+    color: #FFF; /* White text */
     border: none;
-    padding: 12px 24px;
-    font-size: 1.1em;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
-.primary-btn:hover {
-    background-color: #e65c9c;
+button:hover {
+    background-color: #FDCEDF; /* Blush Pink on hover */
 }
 
-/* Footer styles with dark pink */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #cc3366;
-    color: #fff;
-    margin-top: 40px;
-}
-
-/* About and Contact sections */
-section {
-    margin: 30px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Social media icons styling */
-a {
-    color: #ff6f61;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a i {
-    margin-right: 5px;
+/* Actions container */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -187,20 +200,5 @@ a i {
 
     .nail-gallery img {
         width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .nail-gallery img {
-        width: 80%;
-    }
-
-    .logo {
-        font-size: 1.5em;
-    }
-
-    .primary-btn {
-        padding: 10px 16px;
-        font-size: 1em;
     }
 }
