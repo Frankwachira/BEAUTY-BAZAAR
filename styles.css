@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+.logo {
+    width: 80px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Body styles */
 body {
-    background: #F5EFF1 url('https://images.pexels.com/photos/29228984/pexels-photo-29228984.jpeg') no-repeat center center / cover;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #F5EFF1, #E3D7E4); /* Soft gradient */
+    font-family: 'Montserrat', sans-serif; /* Clean sans-serif */
     line-height: 1.6;
-    color: #060607; /* Deep Plum */
+    color: #4A4A4A; /* Dark gray for better contrast */
 }
 
 /* Header styles */
@@ -19,6 +24,7 @@ header {
     color: #3A3967; /* Deep Plum */
     padding: 20px 0;
     text-align: center;
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
 }
 
 .top-bar {
@@ -33,6 +39,7 @@ header {
     color: #3A3967; /* Deep Plum */
 }
 
+/* Profile icon for a more polished look */
 .profile-icon {
     width: 50px;
     height: 50px;
@@ -61,11 +68,12 @@ header {
     font-size: 1.1em;
     display: flex;
     align-items: center;
+    transition: color 0.3s;
 }
 
 .main-nav ul li a:hover,
 .main-nav ul li a:focus {
-    text-decoration: underline;
+    color: #FDCEDF; /* Blush Pink hover effect */
     outline: none;
 }
 
@@ -74,10 +82,6 @@ main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
-}
-
-.dashboard-summary {
-    margin-bottom: 30px;
 }
 
 /* Cards layout */
@@ -89,30 +93,36 @@ main {
 }
 
 .card {
-    background-color: #FFE4E1; /* Soft color for cards */
-    border: 1px solid #DDD;
-    border-radius: 8px;
+    background-color: #FFFFFF; /* White for a clean look */
+    border: 1px solid #EDD1D7; /* Light blush border */
+    border-radius: 15px; /* Rounded corners */
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 250px;
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hover effect for cards */
 }
 
 .card h3 {
     margin-bottom: 10px;
+    color: #3A3967; /* Deep Plum */
 }
 
 /* Nail gallery styles */
 .nail-gallery {
     margin: 40px 0;
-    text-align: center;
-    background-color: #FFF0F5; /* Light soft pink background */
     padding: 30px 20px;
+    background: #F9F8FA; /* Light soft pink background */
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nail-gallery h2 {
-    font-size: 1.8em;
+    font-size: 2em; /* Larger titles for emphasis */
     margin-bottom: 20px;
     color: #3A3967; /* Deep Plum */
 }
@@ -148,57 +158,11 @@ button {
     margin-top: 5px;
     padding: 10px;
     border: 2px solid #FBAE75; /* Champagne Gold */
-    border-radius: 4px;
+    border-radius: 12px; /* Rounded corners */
     font-size: 16px;
 }
 
 select:focus,
 input[type="date"]:focus {
     border-color: #FDCEDF; /* Blush Pink */
-    outline: none;
-}
-
-/* Button styles */
-button {
-    background-color: #FBAE75; /* Champagne Gold */
-    color: #FFF; /* White text */
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #FDCEDF; /* Blush Pink on hover */
-}
-
-/* Actions container */
-.actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nail-gallery img {
-        width: 45%;
-    }
-}
+    outline: none
